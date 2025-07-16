@@ -2177,34 +2177,14 @@ html {
   background-color: rgb(244 208 111 / var(--tw-bg-opacity));
 }
 
-.group:hover .group-hover\:bg-\[\#1f3a2b\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 58 43 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 116 209 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:bg-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 124 133 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:bg-green-light {
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 238 236 / var(--tw-bg-opacity));
-}
-
 .group:hover .group-hover\:bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.group:hover .group-hover\:bg-gradient-to-r {
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--tw-gradient-stops)));
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+.group:hover .group-hover\:bg-\[\#1f3a2b\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 58 43 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:text-green {
