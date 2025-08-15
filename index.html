@@ -95,62 +95,62 @@
 </head>
 
 
-  <body
-<header class="sticky top-0 z-50 bg-white border-b shadow-sm">
-  <nav class="max-w-screen-2xl mx-auto flex items-center justify-between p-4">
-    <!-- Logo -->
-    <a href="/" class="flex items-center gap-2">
-      <img src="./assets/img/logo2.png" alt="Brentwood Capital Mortgage" class="h-10 w-auto">
-    </a>
-
-    <!-- Desktop menu -->
-    <div class="hidden md:flex items-center gap-8">
-      <a href="/" class="font-medium text-gray-800 hover:text-[#2F4A36]">Buy</a>
-      <a href="#refinance" class="font-medium text-gray-800 hover:text-[#2F4A36]">Refinance</a>
-      <a href="#rates" class="font-medium text-gray-800 hover:text-[#2F4A36]">Rates</a>
-      <a href="#loans" class="font-medium text-gray-800 hover:text-[#2F4A36]">Loan options</a>
-    </div>
-
-    <!-- Desktop actions -->
-    <div class="hidden md:flex items-center gap-6">
-      <a href="tel:2109869276" class="flex items-center gap-2 text-gray-800 hover:text-[#2F4A36]">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-            d="M2 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.12 3.35a1 1 0 01-.27 1.07l-1.5 1.5a14.5 14.5 0 006.02 6.02l1.5-1.5a1 1 0 011.07.27l3.35 1.12a1 1 0 01.68.95V20a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/>
-        </svg>
-        (210) 986-9276
+<body class="dark:bg-primary">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+    <nav class="max-w-screen-2xl mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2">
+        <img src="./assets/img/logo2.png" alt="Brentwood Capital Mortgage" class="h-10 w-auto">
       </a>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/" class="font-medium text-gray-800 hover:text-[#2F4A36]">Buy</a>
+        <a href="#refinance" class="font-medium text-gray-800 hover:text-[#2F4A36]">Refinance</a>
+        <a href="#rates" class="font-medium text-gray-800 hover:text-[#2F4A36]">Rates</a>
+        <a href="#loans" class="font-medium text-gray-800 hover:text-[#2F4A36]">Loan options</a>
+      </div>
+
+      <!-- Desktop actions -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="tel:2109869276" class="flex items-center gap-2 text-gray-800 hover:text-[#2F4A36]">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M2 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.12 3.35a1 1 0 01-.27 1.07l-1.5 1.5a14.5 14.5 0 006.02 6.02l1.5-1.5a1 1 0 011.07.27l3.35 1.12a1 1 0 01.68.95V20a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/>
+          </svg>
+          (210) 986-9276
+        </a>
+        <a href="https://brentwoodmtg.com/heidi" target="_blank"
+           class="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-white bg-[#2F4A36] hover:bg-[#244030] shadow-sm">
+          Apply now
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button type="button"
+              class="md:hidden hs-collapse-toggle p-2 text-gray-700 rounded-lg hover:bg-gray-100"
+              data-hs-collapse="#mobile-menu"
+              aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hs-collapse hidden md:hidden px-4 pb-4">
+      <a href="/" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Buy</a>
+      <a href="#refinance" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Refinance</a>
+      <a href="#rates" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Rates</a>
+      <a href="#loans" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Loan options</a>
       <a href="https://brentwoodmtg.com/heidi" target="_blank"
-         class="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-white bg-[#2F4A36] hover:bg-[#244030] shadow-sm">
+         class="mt-3 block bg-[#2F4A36] text-white px-4 py-2 rounded-full hover:bg-[#244030]">
         Apply now
       </a>
     </div>
-
-    <!-- Mobile hamburger -->
-    <button type="button"
-            class="md:hidden hs-collapse-toggle p-2 text-gray-700 rounded-lg hover:bg-gray-100"
-            data-hs-collapse="#mobile-menu"
-            aria-controls="mobile-menu" aria-label="Toggle navigation">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hs-collapse hidden md:hidden px-4 pb-4">
-    <a href="/" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Buy</a>
-    <a href="#refinance" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Refinance</a>
-    <a href="#rates" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Rates</a>
-    <a href="#loans" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Loan options</a>
-    <a href="https://brentwoodmtg.com/heidi" target="_blank"
-       class="mt-3 block bg-[#2F4A36] text-white px-4 py-2 rounded-full hover:bg-[#244030]">
-      Apply now
-    </a>
-  </div>
-</header>
-
+  </header>
 
       <!-- Hero Section -->
     <section class="py-16 lg:py-24 bg-white dark:bg-primary text-primary dark:text-white">
