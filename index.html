@@ -103,7 +103,8 @@
   >
     
 <!-- HEADER -->
-<header x-data="{ open:false }" class="sticky top-0 z-50 bg-white/90 dark:bg-primary/90 backdrop-blur border-b">
+<header x-data="{ open:false }"
+        class="sticky top-0 z-50 bg-white/90 dark:bg-primary/90 backdrop-blur border-b">
   <div class="max-w-screen-2xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
     <!-- Left: Logo -->
     <a href="/" class="shrink-0 flex items-center gap-3">
@@ -120,17 +121,14 @@
 
     <!-- Right: Actions (desktop) -->
     <div class="hidden md:flex items-center gap-6">
-      <!-- Phone -->
       <a href="tel:2109869276" class="flex items-center gap-2 text-gray-900 dark:text-white hover:text-[#2f4a36]">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.12 3.35a1 1 0 01-.27 1.07l-1.5 1.5a14.5 14.5 0 006.02 6.02l1.5-1.5a1 1 0 011.07-.27l3.35 1.12a1 1 0 01.68.95V20a2 2 0 01-2 2h-.5C8.82 22 2 15.18 2 6.5V6a2 2 0 010-1z"/></svg>
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                d="M2 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.12 3.35a1 1 0 01-.27 1.07l-1.5 1.5a14.5 14.5 0 006.02 6.02l1.5-1.5a1 1 0 011.07-.27l3.35 1.12a1 1 0 01.68.95V20a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/>
+        </svg>
         <span class="font-semibold">(210) 986-9276</span>
       </a>
-      <!-- Sign in -->
-      <a href="/signin" class="flex items-center gap-2 text-gray-900 dark:text-white hover:text-[#2f4a36]">
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a7.5 7.5 0 0115 0V21H4.5v-.75z"/></svg>
-        <span>Sign in</span>
-      </a>
-      <!-- Apply Now (CTA) -->
+      <a href="/signin" class="text-gray-900 dark:text-white hover:text-[#2f4a36]">Sign in</a>
       <a href="https://brentwoodmtg.com/heidi" target="_blank"
          class="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-white bg-[#2f4a36] hover:bg-[#244030] shadow-sm transition">
         Apply now
@@ -138,17 +136,26 @@
     </div>
 
     <!-- Mobile: hamburger -->
-    <button @click="open = true" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-800 dark:text-white hover:bg-gray-100/70">
-      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <button @click="open = true"
+            class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-800 dark:text-white hover:bg-gray-100/70">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
     </button>
   </div>
 
-  <!-- Mobile drawer -->
-  <div x-show="open" x-transition.opacity class="md:hidden fixed inset-0 z-40 bg-black/50"></div>
-  <aside x-show="open" x-transition
+  <!-- Backdrop (mobile) -->
+  <div x-cloak x-show="open" x-transition.opacity
+       class="md:hidden fixed inset-0 z-40 bg-black/50"></div>
+
+  <!-- Drawer (mobile) -->
+  <aside x-cloak x-show="open" x-transition
+         @click.outside="open = false"      <!-- v3 syntax: .outside (not .away) -->
          class="md:hidden fixed right-0 top-0 z-50 h-full w-4/5 max-w-sm bg-white dark:bg-primary shadow-xl p-6">
     <button @click="open = false" class="absolute right-4 top-4 p-2 rounded-md hover:bg-gray-100/70">
-      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
     </button>
     <nav class="mt-10 space-y-4">
       <a href="/" class="block text-lg font-medium text-gray-900 dark:text-white">Buy</a>
