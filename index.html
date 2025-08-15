@@ -89,163 +89,70 @@
 <link rel="stylesheet" href="./assets/styles/main.css">
 
 
-
-  <!--Alpine Js V3-->
+  <!--Alpine Js V3 and preline framework-->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/preline/dist/preline.js"></script>
+
 </head>
 
 
   <body
-    x-data="global()"
-    x-init="themeInit()"
-    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
-    class="dark:bg-primary bg-[#2f4a36]"
-  >
-    
-    <div id="main">
-      <div class="w-full max-w-screen-2xl mx-auto px-12 sm:px-16 lg:px-24">
-      <div class="flex items-center justify-between py-6 lg:py-10">
-
-      <a href="/" class="flex items-center">
-      <img src="./assets/img/logo2.png" alt="Brentwood Capital Mortgage" class="h-24" />
+   <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+  <nav class="max-w-screen-2xl mx-auto flex items-center justify-between p-4">
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2">
+      <img src="./assets/img/logo2.png" alt="Brentwood Capital Mortgage" class="h-10 w-auto">
     </a>
 
+    <!-- Desktop menu -->
+    <div class="hidden md:flex items-center space-x-8">
+      <a href="/" class="text-gray-700 hover:text-[#2F4A36] font-medium">Buy</a>
+      <a href="#refinance" class="text-gray-700 hover:text-[#2F4A36] font-medium">Refinance</a>
+      <a href="#rates" class="text-gray-700 hover:text-[#2F4A36] font-medium">Rates</a>
+      <a href="#loans" class="text-gray-700 hover:text-[#2F4A36] font-medium">Loan options</a>
+    </div>
 
-    <div class="flex items-center lg:hidden">
-        <i
-          class="bx mr-8 cursor-pointer text-3xl text-primary dark:text-white"
-          @click="themeSwitch()"
-          :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
-        ></i>
+    <!-- Desktop actions -->
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="tel:2109869276" class="text-gray-700 hover:text-[#2F4A36] flex items-center gap-1">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M2 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.12 3.35a1 1 0 01-.27 1.07l-1.5 1.5a14.5 14.5 0 006.02 6.02l1.5-1.5a1 1 0 011.07.27l3.35 1.12a1 1 0 01.68.95V20a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"/>
+        </svg>
+        (210) 986-9276
+      </a>
+      <a href="https://brentwoodmtg.com/heidi" target="_blank"
+         class="bg-[#2F4A36] text-white px-4 py-2 rounded-full hover:bg-[#244030] transition">
+        Apply Now
+      </a>
+    </div>
 
-      <svg
-        width="24"
-        height="15"
-        xmlns="http://www.w3.org/2000/svg"
-        @click="isMobileMenuOpen = true"
-        class="fill-current text-primary dark:text-white"
-      >
-        <g fill-rule="evenodd">
-          <rect width="24" height="3" rx="1.5" />
-          <rect x="8" y="6" width="16" height="3" rx="1.5" />
-          <rect x="4" y="12" width="20" height="3" rx="1.5" />
-        </g>
+    <!-- Mobile hamburger -->
+    <button type="button" class="md:hidden text-gray-700 hs-collapse-toggle" 
+      data-hs-collapse="#mobile-menu" aria-controls="mobile-menu" aria-label="Toggle navigation">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
-    </div>
-    
-    <div class="hidden lg:block ">
-      <ul class="flex items-center">
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="/"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Intro</a
-          >
-        </li>
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="#experience"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Experience</a
-          >
-        </li>
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="/uses"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Gallery</a
-          >
-        </li>
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="/contact"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Contact</a
-          >
-        </li>
-        
-        <li>
-          <i
-            class="bx cursor-pointer text-3xl text-primary dark:text-white"
-            @click="themeSwitch()"
-            :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
-          ></i>
-        </li>
-      </ul>
-    </div>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hs-collapse hidden md:hidden px-4 pb-4">
+    <a href="/" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Buy</a>
+    <a href="#refinance" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Refinance</a>
+    <a href="#rates" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Rates</a>
+    <a href="#loans" class="block py-2 text-gray-700 hover:text-[#2F4A36]">Loan options</a>
+    <a href="https://brentwoodmtg.com/heidi" target="_blank"
+       class="mt-3 block bg-[#2F4A36] text-white px-4 py-2 rounded-full hover:bg-[#244030]">
+      Apply Now
+    </a>
   </div>
-</div>
+</header>
 
-<div
-  class="pointer-events-none fixed inset-0 z-50 flex bg-black bg-opacity-80 opacity-0 transition-opacity lg:hidden "
-  :class="isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''"
->
-  <div class="ml-auto w-2/3 bg-green p-4 md:w-1/3 ">
-    <i
-      class="bx bx-x absolute top-0 right-0 mt-4 mr-4 text-4xl text-white"
-      @click="isMobileMenuOpen = false"
-    ></i>
-    <ul class="mt-8 flex flex-col">
-      
-      <li class="">
-        <a
-          href="/"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Intro</a
-        >
-      </li>
-      
-      <li class="">
-        <a
-          href="/blog"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Experience</a
-        >
-      </li>
-      
-      <li class="">
-        <a
-          href="/uses"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Gallery</a
-        >
-      </li>
-      
-      <li class="">
-        <a
-          href="/contact"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Contact</a
-        >
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-
-      <div>
       <!-- Hero Section -->
-<section class="py-16 lg:py-24 bg-white dark:bg-primary text-primary dark:text-white">
-<div class="w-full px-8 sm:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-20 max-w-screen-2xl mx-auto">
-
-
+    <section class="py-16 lg:py-24 bg-white dark:bg-primary text-primary dark:text-white">
+    <div class="w-full px-8 sm:px-12 lg:px-20 flex flex-col-reverse lg:flex-row items-center gap-20 max-w-screen-2xl mx-auto">
 
     <!-- Text -->
     <div class="w-full lg:w-1/2 text-center lg:text-left">
