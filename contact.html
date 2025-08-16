@@ -10,20 +10,22 @@
     name="viewport"
   />
 
-  <title>Contact</title>
+  <title> Elizabeth | Portfolio </title>
 
-  <meta property="og:title" content="Contact | Atlas Template" />
+  <meta property="og:title" content="Homepage | Atlas Template" />
 
   <meta property="og:locale" content="en_US" />
 
   <link
     rel="canonical"
-    href="https://atlas.tailwindmade.com/contact"
+    href="https://atlas.tailwindmade.com/"
   />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
 
   <meta
     property="og:url"
-    content="https://atlas.tailwindmade.com/contact"
+    content="https://atlas.tailwindmade.com/"
   />
 
   <meta
@@ -31,7 +33,6 @@
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   />
 
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
 
   <meta property="og:site_name" content="Atlas Template" />
 
@@ -63,12 +64,13 @@
     href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
   />
 
-  <link
-    crossorigin="anonymous"
-    href="/assets/styles/main.min.css"
-    media="screen"
-    rel="stylesheet"
-  />
+<link
+  crossorigin="anonymous"
+  href="./assets/styles/main.min.css"
+  media="screen"
+  rel="stylesheet"
+/>
+
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 
@@ -81,254 +83,202 @@
     hljs.initHighlightingOnLoad();
   </script>
 
-    <!-- CSS -->
+  <!-- CSS -->
 <link rel="stylesheet" href="./assets/styles/main.min.css">
 <link rel="stylesheet" href="./assets/styles/main.css">
-<!-- Images -->
 
-  <!--Alpine Js V3-->
+
+  <!--Alpine Js V3 and preline framework-->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
 </head>
 
 
-  <body
-    x-data="global()"
-    x-init="themeInit()"
-    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
-    class="dark:bg-primary"
-  >
-  <div id="main">
-      <div class="container mx-auto">
-      <div class="flex items-center justify-between py-6 lg:py-10">
-        <a href="/" class="flex items-center">
-        <img src="/assets/img/logo2.png" alt="Brentwood Capital Mortgage" class="h-20 w-auto object-contain" />
+
+
+<body class="dark:bg-primary">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+    <nav class="max-w-screen-2xl mx-auto flex items-center justify-between p-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2">
+        <img src="./assets/img/logo2.png" alt="Brentwood Capital Mortgage" class="h-15 w-auto">
       </a>
-    </a>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/" class="font-medium text-gray-800 hover:text-[#2F4A36]">About me</a>
+        <a href="#experience" class="font-medium text-gray-800 hover:text-[#2F4A36]">Experience</a>
+        <a href="./gallery.html" class="font-medium text-gray-800 hover:text-[#2F4A36]">Gallery</a>
+        <a href="./contact.html" class="font-medium text-gray-800 hover:text-[#2F4A36]">Contact me</a>
+      </div>
+
+      <!-- Desktop actions -->
+      <div class="hidden md:flex items-center gap-6">
+   <a href="tel:2109869276" 
+        class="flex items-center gap-2 text-xl font- text-[#2F4A36] hover:text-[#1e3426] transition-colors duration-200">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" />
+        </svg>
+        (210) 986-9276
+      </a>
 
 
-    <div class="flex items-center lg:hidden">
-      <i
-        class="bx mr-8 cursor-pointer text-3xl text-primary dark:text-white"
-        @click="themeSwitch()"
-        :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
-      ></i>
-
-      <svg
-        width="24"
-        height="15"
-        xmlns="http://www.w3.org/2000/svg"
-        @click="isMobileMenuOpen = true"
-        class="fill-current text-primary dark:text-white"
-      >
-        <g fill-rule="evenodd">
-          <rect width="24" height="3" rx="1.5" />
-          <rect x="8" y="6" width="16" height="3" rx="1.5" />
-          <rect x="4" y="12" width="20" height="3" rx="1.5" />
-        </g>
-      </svg>
-    </div>
-    <div class="hidden lg:block">
-      <ul class="flex items-center">
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="/"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Intro</a
-          >
-        </li>
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="/"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Experience</a
-          >
-        </li>
-        
-        <li class="group relative mr-6 mb-1">
-          <div
-            class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-black"
-          ></div>
-          <a
-            href="/uses"
-            class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-            >Gallery</a
-          >
-        </li>
-        
-        <li class="group relative mr-6 mb-1">
-        <div
-          class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-[#1f3a2b]"
-        ></div>
-        <a
-          href="/contact"
-          class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-        >
-          Contact
+        <a href="https://brentwoodmtg.com/heidi" target="_blank"
+           class="inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold text-white bg-[#2F4A36] hover:bg-[#244030] shadow-sm">
+          Apply now
         </a>
-      </li>
-
-
-
-        
-        <li>
-          <i
-            class="bx cursor-pointer text-3xl text-primary dark:text-white"
-            @click="themeSwitch()"
-            :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
-          ></i>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div
-  class="pointer-events-none fixed inset-0 z-50 flex bg-black bg-opacity-80 opacity-0 transition-opacity lg:hidden"
-  :class="isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''"
->
-  <div class="ml-auto w-2/3 bg-green p-4 md:w-1/3">
-    <i
-      class="bx bx-x absolute top-0 right-0 mt-4 mr-4 text-4xl text-white"
-      @click="isMobileMenuOpen = false"
-    ></i>
-    <ul class="mt-8 flex flex-col">
-      
-      <li class="">
-        <a
-          href="/"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Intro</a
-        >
-      </li>
-      
-      <li class="">
-        <a
-          href="/"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Experience</a
-        >
-      </li>
-      
-      <li class="">
-        <a
-          href="/uses"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Gallery</a
-        >
-      </li>
-      
-      <li class="">
-        <a
-          href="/contact"
-          class="mb-3 block px-2 font-body text-lg font-medium text-white"
-          >Contact</a
-        >
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-
-      <div><div class="container mx-auto">
-  <div class="py-16 lg:py-20">
-    <div>
-    </div>
-    <h1
-      class="pt-5 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl"
-    >
-      Contact
-    </h1>
-    <div class="pr-2 pt-3 sm:pt-0">
-      <p class="font-body text-xl font-light text-primary dark:text-white">
-        Got a question or proposal, or just want to say hello? Go ahead. You know what to do.
-      </p>
-    </div>
-    <form class="pt-16">
-      <div class="flex flex-col sm:flex-row">
-        <div class="w-full sm:mr-3 sm:w-1/2">
-          <label
-            class="block pb-3 font-body font-medium text-primary dark:text-white"
-            >Your Name</label
-          >
-          <input
-            type="text"
-            id="name"
-            placeholder="What should I call you?"
-            class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"
-          />
-        </div>
-        <div class="w-full pt-6 sm:ml-3 sm:w-1/2 sm:pt-0">
-          <label
-            class="block pb-3 font-body font-medium text-primary dark:text-white"
-            >Email Address</label
-          >
-          <input
-            type="email"
-            id="email"
-            placeholder="Drop that email here…"
-            class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"
-          />
-        </div>
       </div>
-      <div class="w-full pt-6 sm:pt-10">
-        <label
-          class="block pb-3 font-body font-medium text-primary dark:text-white"
-          >Email Address</label
-        >
-        <textarea
-          id="message"
-          cols="30"
-          rows="9"
-          placeholder="Tell me all the things that you think I need to hear…"
-          class="w-full border border-primary bg-grey-lightest px-5 py-4 font-body font-light text-primary placeholder-primary transition-colors focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary dark:text-white"
-        ></textarea>
-      </div>
-<button
-  class="mt-10 mb-12 block bg-[#2F4A36] px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-[#1f3a2b] sm:inline-block sm:text-left sm:text-2xl"
->
-  Send Message
-</button>
 
-    </form>
-  </div>
-</div>
+      <!-- Mobile hamburger -->
+      <button type="button"
+              class="md:hidden hs-collapse-toggle p-2 text-gray-700 rounded-lg hover:bg-gray-100"
+              data-hs-collapse="#mobile-menu"
+              aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div class="flex items-center justify-center mb-8">
+  <span class="w-16 h-1 bg-[#2F4A36] rounded-full"></span>
 </div>
 
-      
-   <div class="container mx-auto px-4">
-  <div class="flex flex-col items-center justify-between border-t border-grey-lighter py-10 sm:flex-row sm:py-12">
-    
-    <!-- Logo and Copyright -->
-    <div class="flex flex-col items-center text-center sm:flex-row sm:text-left">
-      <a href="/" class="sm:mr-6 mb-4 sm:mb-0">
-        <img src="/assets/img/logo2.png" alt="Brentwood Capital Mortgage logo" class="h-10" />
-      </a>
-      <p class="font-body font-light text-primary dark:text-white">
-        ©2025 Elizabeth De Santiago. All rights reserved.
+     <!-- CONTACT -->
+<section class="px-6 sm:px-8 lg:px-10 py-16 lg:py-20 bg-white dark:bg-primary">
+  <div class="mx-auto max-w-6xl">
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#2F4A36]">Contact</h1>
+      <p class="mt-4 text-lg text-gray-700 dark:text-white/90">
+        Got a question or proposal, or just want to say hello? I’d love to hear from you.
       </p>
     </div>
 
-    <!-- Social Icons -->
-    <div class="flex items-center mt-6 sm:mt-0 space-x-6">
-  
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/elizabeth-desantiago/" target="_blank" aria-label="LinkedIn">
-        <i class="bx bxl-linkedin text-2xl text-primary dark:text-white hover:text-secondary transition-colors"></i>
+    <!-- Grid -->
+    <div class="grid lg:grid-cols-5 gap-8">
+     <!-- Left: contact info -->
+<aside class="lg:col-span-2">
+  <section class="h-full rounded-2xl border border-gray-200/70 bg-white p-6 shadow-sm">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl font-semibold text-[#2F4A36]">Reach me directly</h2>
+      <span class="inline-flex items-center rounded-full border border-gray-200/80 px-2.5 py-1 text-xs font-medium text-gray-600">
+        Replies in 1–2 days
+      </span>
+    </div>
+
+    <div class="mt-5 space-y-3">
+      <!-- Phone -->
+      <a href="tel:2109869276"
+         class="group flex items-center gap-3 rounded-lg p-3 transition hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200/80">
+          <img src="/assets/img/phone-solid-full.svg" alt="Phone" class="h-5 w-5">
+        </span>
+        <span class="leading-tight">
+          <span class="block text-xs text-gray-500">Phone</span>
+          <span class="block font-semibold tracking-wide text-gray-900 group-hover:text-[#2F4A36]">
+            (210) 986-9276
+          </span>
+        </span>
       </a>
 
-      <!-- Email icon (optional) -->
-      <a href="mailto:liz@brentwoodmtg.com" aria-label="Email">
-        <i class="bx bx-envelope text-2xl text-primary dark:text-white hover:text-secondary transition-colors"></i>
+      <!-- Email -->
+      <a href="mailto:liz@brentwoodmtg.com"
+         class="group flex items-center gap-3 rounded-lg p-3 transition hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200/80">
+          <img src="/assets/img/envelope-solid-full.svg" alt="Email" class="h-5 w-5">
+        </span>
+        <span class="leading-tight">
+          <span class="block text-xs text-gray-500">Email</span>
+          <span class="block font-semibold text-gray-900 group-hover:text-[#2F4A36]">
+            liz@brentwoodmtg.com
+          </span>
+        </span>
+      </a>
+
+      <!-- Address -->
+      <a href="https://maps.google.com/?q=25331+IH-10+W,+Ste+210,+San+Antonio,+TX+78257"
+         target="_blank" rel="noopener"
+         class="group flex items-center gap-3 rounded-lg p-3 transition hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200/80">
+          <img src="/assets/img/location-dot-solid-full.svg" alt="Location" class="h-5 w-5">
+        </span>
+        <span class="leading-tight">
+          <span class="block text-xs text-gray-500">Office</span>
+          <span class="block text-gray-900">
+            25331 IH-10 W, Ste 210<br>San Antonio, TX 78257
+          </span>
+        </span>
       </a>
     </div>
+
+    <!-- Divider + small print -->
+    <div class="mt-6 border-t border-gray-100 pt-4">
+      <p class="text-sm text-gray-600">
+        Prefer a quick chat? Call or email—I’ll get back to you as soon as possible.
+      </p>
+    </div>
+  </section>
+</aside>
+
+
+      <!-- Right: form -->
+      <div class="lg:col-span-3">
+        <form
+          class="rounded-2xl border border-gray-200/70 bg-white dark:bg-white/5 p-6 md:p-8 shadow-sm space-y-6"
+          action="https://formspree.io/f/your-id" method="POST"
+        >
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-800 dark:text-white">Your name</label>
+              <input
+                type="text" id="name" name="name" autocomplete="name" required
+                placeholder="What should I call you?"
+                class="mt-2 w-full rounded-xl border border-gray-300/80 bg-white px-4 py-3 text-gray-900 placeholder-gray-400
+                       focus:outline-none focus:ring-4 focus:ring-[#2F4A36]/20 focus:border-[#2F4A36]"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-800 dark:text-white">Email address</label>
+              <input
+                type="email" id="email" name="email" autocomplete="email" required
+                placeholder="you@example.com"
+                class="mt-2 w-full rounded-xl border border-gray-300/80 bg-white px-4 py-3 text-gray-900 placeholder-gray-400
+                       focus:outline-none focus:ring-4 focus:ring-[#2F4A36]/20 focus:border-[#2F4A36]"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-800 dark:text-white">Your message</label>
+            <textarea
+              id="message" name="message" rows="6" required
+              placeholder="Tell me what you have in mind…"
+              class="mt-2 w-full rounded-xl border border-gray-300/80 bg-white px-4 py-3 text-gray-900 placeholder-gray-400
+                     focus:outline-none focus:ring-4 focus:ring-[#2F4A36]/20 focus:border-[#2F4A36] resize-y"
+            ></textarea>
+          </div>
+
+          <!-- Honeypot (spam protection) -->
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <div class="flex items-center justify-between gap-4">
+            <p class="text-sm text-gray-500">
+              By sending, you agree to be contacted about your inquiry.
+            </p>
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-full bg-[#2F4A36] px-6 py-3 text-white font-semibold
+                     hover:bg-[#1f3a2b] transition shadow-sm"
+            >
+              Send message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-</div>
+</section>
