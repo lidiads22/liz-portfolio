@@ -3,6 +3,7 @@
 
 html {
   @apply font-body antialiased;
+  scroll-behavior: smooth;
 }
 
 @tailwind utilities;
