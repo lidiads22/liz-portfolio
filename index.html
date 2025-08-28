@@ -440,6 +440,13 @@
     </div>
   </div>
 </div>
+<script>
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+</script>
 <script src="https://unpkg.com/preline/dist/preline.js"></script>
 </body>
 </html>
