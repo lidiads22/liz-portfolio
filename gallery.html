@@ -316,6 +316,13 @@
     </div>
   </div>
 </div>
+<script>
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+</script>
   <!-- Preline script for hamburger menu -->
   <script src="https://unpkg.com/preline@latest/dist/preline.js"></script>
 </body>
